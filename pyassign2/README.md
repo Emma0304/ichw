@@ -4,4 +4,4 @@
 Function   | Description
 --------|----------
 exchange() |calculating the result
-test()     |test whether the function and the result is valid.
+test()     |testing whether the function and the result is valid.
