@@ -3,5 +3,5 @@
 ### The code contains: 
 Function   | Description
 --------|----------
-exchange() |calculating the result
+exchange() |calculating the result & validity checking
 test()     |testing whether the function and the result is valid.
