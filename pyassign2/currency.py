@@ -5,7 +5,7 @@
 __author__ = "Xiaxinyi"
 __pkuid__  = "1700017788"
 __email__  = "1700017788@pku.edu.cn"
-__last-edited__="2018/11/25"
+__last-edited__="2018/11/27"
 """
 """Module for currency exchange
 
@@ -14,10 +14,6 @@ simple currency exchange routine using an online currency service.
 The primary function in this module is exchange."""
 
 from urllib.request import urlopen
-
-currencyfrom = input("Please input your currency on hand:")
-currencyto = input("Please input the currency you want to convert to:")
-amount = input("Please input the amount of your current on hand:")
 
 def exchange(currencyfrom,currencyto,amount):
     """
@@ -82,6 +78,9 @@ def main():
     :return: the result
     """
     testAll()
+    currencyfrom = input("Please input your currency on hand:")
+    currencyto = input("Please input the currency you want to convert to:")
+    amount = input("Please input the amount of your current on hand:")
     print(exchange(currencyfrom, currencyto, amount))
 
 if __name__ == '__main__':
