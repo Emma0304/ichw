@@ -12,24 +12,6 @@ import turtle
 import math
 
 
-# the sequence of solar system
-sequences = {'mercury': 1,
-                 'venus': 2,
-                 'earth': 3,
-                 'mars': 4,
-                 'jupiter': 5,
-                 'saturn': 6,
-                 'uranus': 7,
-                 'neptune': 8,
-                 }
-								 
-								 
-# the list of planets
-planets=[]
-# the radius of planets
-radius = [0.2, 0.4, 0.4, 0.3, 0.6, 0.6, 0.2, 0.1]
-
-
 def genturtle():
     """
     generate the planets in the original position
@@ -107,8 +89,24 @@ def start():
 
 
 def main():
-    """main module
-    """
+	"""main model
+	"""
+	# the sequence of solar system
+	sequences = {'mercury': 1,
+                 'venus': 2,
+                 'earth': 3,
+                 'mars': 4,
+                 'jupiter': 5,
+                 'saturn': 6,
+                 'uranus': 7,
+                 'neptune': 8,
+                 }
+								 
+								 
+	# the list of planets
+	planets=[]
+	# the radius of planets
+	radius = [0.2, 0.4, 0.4, 0.3, 0.6, 0.6, 0.2, 0.1]
     start()
 
 
