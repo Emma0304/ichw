@@ -39,7 +39,7 @@ def wcount(lines, topn=10):
             else:
                 countdict[i] = 1
     # 生成单词与单词数量的一一对应，以便对单词出现数量进行排序
-    lst = [] 
+    lst = []
     for k, v in countdict.items():
         lst.append((v, k))
         lst.sort(reverse=True)
@@ -60,14 +60,14 @@ def retrieve_page(url):
             data = my_socket.read().decode()
             return data
     except error.HTTPError as he:        # HTTPError输出
-        print(he.reason)
+        print(he)
     except error.URLError as ue:         # URLError输出
-        print(ue.reason)
+        print(ue)
     except Exception as e:               # 其他错误输出
         print(e)
 
 
-if __name__ == '__main__':
+def main():
     """main model
     """
     # wrong format input
@@ -77,12 +77,16 @@ if __name__ == '__main__':
         print('  topn: how many (words count) to output. If not given, will output top 10 words')
         sys.exit(1)
     # correct format input
-    elif len(sys.argv) == 3:                      # 输入3个字符，即输入topn时
+    elif len(sys.argv) == 3:  # 输入3个字符，即输入topn时
         web = str(sys.argv[1])
         jstr = retrieve_page(web)
         number = int(sys.argv[2])
         print(wcount(jstr, number))
-    else:                                         # 输入两个字符，topn默认为10
+    else:                    # 输入两个字符，topn默认为10
         web = str(sys.argv[1])
         jstr = retrieve_page(web)
         print(wcount(jstr))
+
+
+if __name__ == '__main__':
+    main()
